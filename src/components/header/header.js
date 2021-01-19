@@ -1,17 +1,22 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import LINKS from './links'
 import React from "react"
+import S, { NavList } from '../../styles/header'
+
+const {
+  HeaderWrapper
+} = S
 
 const Header = ({ siteTitle }) => (
-  <header
+  <HeaderWrapper
     style={{
+      position: 'absolute',
       background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
-        margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
@@ -28,10 +33,21 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
       <ul>
-        
+        {LINKS.map((item, index) => {
+          return <NavList key={index} >
+            <Link 
+            to={item.url}
+            activeClassName='active'
+            >{item.title}</Link>
+          </NavList>
+        })}
+        <NavList>
+          <button>Sign out</button>
+
+        </NavList>
       </ul>
     </div>
-  </header>
+  </HeaderWrapper>
 )
 
 Header.propTypes = {

@@ -1,3 +1,45 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --main-blue: #01112c;
+  --accent-color: #00a1f6;
+  --main-green: #03bd52;
+  --nav-bc: #8e1bb1a2;
+  --blue: #30259f;
+  --bc: #fdfdfd;
+  --bc-hover: #029942;
+  --orange: #ff9838;
+  --text-unselect: #787885;
+  --input-icon: #617083;
+  --btn-green-bc: #e3fbf5;
+  --green-status: #1dc39a;
+  --danger-status: #fcebe8;
+  --warning-status: #fef6ec;
+  --warning-status-color: #f7b055;
+  --danger-status-color: #e34a30;
+  --orange-bc: #fef6ec;
+  --sub-text: #aeaeae;
+  --action-view: #E4EFFD;
+  --action-view-color: #1072f1;
+  --group-border-rd: 20px;
+  --card-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
+    0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035);
+  --card-border: #e0e0e0;
+  --card-inp-bg: #f2f2f2;
+  --card-btn-shadow: 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.00562291);
+  --select-text: #5c5c5c;
+  --center-logo-shadow: 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
+    0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
+    0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+  --center-card-shadow: 0px 13px 15px 4px #fafbfc;
+  --greey: #e0e0e0;
+  --card-border: #d4d4d4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -242,7 +284,7 @@ textarea {
   font: inherit;
 }
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 *:before {
   box-sizing: inherit;
