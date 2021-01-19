@@ -1,23 +1,56 @@
 export default [
     {
-        url: '/dashboard'
+      url: "/dashboard",
+      exact: true,
+      title: "Dashboard",
+    //   icon: <AiOutlineHome />,
     },
     {
-        url: '/dashboard'
+      url: "/admission",
+      exact: true,
+      title: "Admission",
+    //   icon: <AiFillEdit />,
     },
     {
-        url: '/dashboard'
+      url: "/subject",
+      exact: true,
+      title: "Subjects",
+    //   icon: <AiFillBook />,
     },
     {
-        url: '/dashboard'
+      url: "/instructors",
+      exact: true,
+      title: "Instructors",
+    //   icon: <AiOutlineGroup />,
     },
     {
-        url: '/dashboard'
+      url: "/group",
+      exact: true,
+      title: "Groups",
+    //   icon: <AiOutlineGroup />,
     },
     {
-        url: '/dashboard'
+      url: "/student",
+      exact: true,
+      title: "Students",
+    //   icon: <AiOutlineUser />,
     },
     {
-        url: '/dashboard'
+      url: "/schedule",
+      exact: true,
+      title: "Schedule",
+    //   icon: <AiOutlineSchedule />,
     },
-]
+    {
+      url: "/expence",
+      exact: true,
+      title: "Expence",
+    //   icon: <AiOutlineUnorderedList />,
+    },
+    {
+      url: "/payment",
+      exact: true,
+      title: "Payments",
+    //   icon: <AiFillPayCircle />,
+    },
+  ]
