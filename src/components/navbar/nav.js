@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 import { AiOutlineBell } from 'react-icons/ai';
-import { Nav, FlexWrapper } from '../../styles';
+import { Nav } from '../../styles/header';
+import { FlexWrapper } from '../../styles';
 // import defaultImg from '../../assets/img/profile.jpg';
 
 const Navbar = (props) => {
-  const { img, name, type } = props;
+  const {  name, type } = props;
 
   return (
     <Nav>

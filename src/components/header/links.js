@@ -1,67 +1,69 @@
-// import {
-//   AiOutlineHome,
-//   AiOutlineUser,
-//   AiFillEdit,
-//   AiFillBook,
-//   AiOutlineGroup,
-//   AiOutlineUnorderedList,
-//   AiFillPayCircle,
-//   AiOutlineSchedule,
-// } from "react-icons/ai";
+import React from "react"
+
+import {
+  AiOutlineHome,
+  AiOutlineUser,
+  AiFillEdit,
+  AiFillBook,
+  AiOutlineGroup,
+  AiOutlineUnorderedList,
+  AiFillPayCircle,
+  AiOutlineSchedule,
+} from "react-icons/ai";
 
 export default [
     {
       url: "/dashboard",
       exact: true,
       title: "Dashboard",
-      // icon: <AiOutlineHome />,
+      icon: <AiOutlineHome />,
     },
     {
       url: "/admission",
       exact: true,
       title: "Admission",
-      // icon: <AiFillEdit />,
+      icon: <AiFillEdit />,
     },
     {
       url: "/subject",
       exact: true,
       title: "Subjects",
-      // icon: <AiFillBook />,
+      icon: <AiFillBook />,
     },
     {
       url: "/instructors",
       exact: true,
       title: "Instructors",
-      // icon: <AiOutlineGroup />,
+      icon: <AiOutlineGroup />,
     },
     {
       url: "/group",
       exact: true,
       title: "Groups",
-      // icon: <AiOutlineGroup />,
+      icon: <AiOutlineGroup />,
     },
     {
       url: "/student",
       exact: true,
       title: "Students",
-      // icon: <AiOutlineUser />,
+      icon: <AiOutlineUser />,
     },
     {
       url: "/schedule",
       exact: true,
       title: "Schedule",
-      // icon: <AiOutlineSchedule />,
+      icon: <AiOutlineSchedule />,
     },
     {
       url: "/expence",
       exact: true,
       title: "Expence",
-      // icon: <AiOutlineUnorderedList />,
+      icon: <AiOutlineUnorderedList />,
     },
     {
       url: "/payment",
       exact: true,
       title: "Payments",
-      // icon: <AiFillPayCircle />,
+      icon: <AiFillPayCircle />,
     },
   ]

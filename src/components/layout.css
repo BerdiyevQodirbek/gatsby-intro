@@ -40,6 +40,11 @@
   box-sizing: border-box;
 }
 
+.ml-auto {
+  margin-left: auto !important;
+}
+
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -47,6 +52,11 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
 }
+
+html::-webkit-scrollbar {
+  width: 0px;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;

@@ -2,8 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 import S from '../styles/latyout'
+import 'antd/dist/antd.css'
 
 import Header from "./header/header"
+import Navbar from "./navbar/nav"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -20,11 +22,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={`MyCenter`} />
+      <Navbar />
       <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-        }}
       >
         <S.MainWrapper>{children}</S.MainWrapper>
         {/* <footer
