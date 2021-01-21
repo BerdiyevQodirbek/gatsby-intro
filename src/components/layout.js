@@ -6,7 +6,7 @@ import 'antd/dist/antd.css'
 
 import Header from "./header/header"
 import Navbar from "./navbar/nav"
-import "./layout.css"
+import '../styles/style.css'
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`

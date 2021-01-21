@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import Layout from "../../components/layout";
 // import Create from "./create";
 // import Update from "./update";
 // import { Link } from "gatsby";
-// import Center from "../Center/index";
+import Center from "./center/index";
 // const UserData = {
 //   name: "Abdullayeva Malika Baxrom qizi",
 //   subjectType: "IELTS",
@@ -14,12 +14,9 @@ import Layout from "../../components/layout";
 // };
 
 function Index(props) {
-    const [check, setCheck] = useState(false)
   return (
     <Layout>
-      {/* <Center /> */}
-      <h1>Profile</h1>
-      <br />
+      <Center />
       {/* <Update data={UserData} /> */}
     </Layout>
   );
