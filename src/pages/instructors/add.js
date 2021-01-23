@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import WebcamCapture from './webCam'
 import Student from '../../styles/pages/student/index'
 import User from "../../styles/forms/User";
+import Layout from '../../components/layout'
 
 import { Form, Input, Select } from 'antd';
 import {
@@ -49,7 +50,7 @@ var dataSpecials = [
 ]
 
 
-function AddInstructor() {
+function Index() {
     const [WebCam, setWebCam] = useState(false)
     const [image, setImage] = useState('')
     // const [InstructorName, setInstructorName] = useState('')
@@ -85,10 +86,10 @@ function AddInstructor() {
 
 
     return (
-        <React.Fragment>
+        <Layout>
             {WebCam ? (<WebcamCapture fileUrl={Url} hideModal={isWebCame} />) : ''}
             <StudentWrapper className="add">
-                <h4 className="add__title">Create Student</h4>
+                <h4 className="add__title">Create Instructor</h4>
                 <div className="add__upload-img">
                     <CameraButton onClick={isWebCame} className="add__CameraButton">
                         <CameraOutlined />
@@ -194,8 +195,8 @@ function AddInstructor() {
                     </Form>
                 </div>
             </StudentWrapper>
-        </React.Fragment>
+        </Layout>
     );
 }
 
-export default AddInstructor;
+export default Index;

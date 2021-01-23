@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby'
 import { FlexWrapper } from "../../styles/index";
-// import S from '../../styles/button'
-// import { ReactComponent as EditeBtn} from '../../assets/img/svg/edite.svg'
+import S from '../../styles/button'
+import {StatusBtn} from '../../styles/index'
 
 import { Table } from 'antd';
 
-// const { WarnBtn } = S
+const { WarnBtn } = S
 
 const columns = [
     {
@@ -18,9 +18,9 @@ const columns = [
         )
     },
     {
-        title: 'Instructor Name',
-        dataIndex: 'instructorName',
-        key: 'instructorName',
+        title: 'Student Name',
+        dataIndex: 'studentName',
+        key: 'studentName',
         render: (text, record) => (
             <FlexWrapper justify="flex-start" align="center">
                 <img style={{
@@ -28,7 +28,7 @@ const columns = [
                     height: '28px',
                     borderRadius: '50%',
                     objectFit: 'cover'
-                }} className="table__col-img" src={record.img} alt="instuctor-img" />
+                }} className="table__col-img" src={record.img} alt="student-img" />
                 <div>
                     <Link to='info' style={{ marginLeft: "15px", marginBottom: '0' }}>{text}</Link>
                     <p style={{ color: '--main-green' }}>{record.groups}</p>
@@ -38,83 +38,86 @@ const columns = [
         ),
     },
     {
-        title: 'Students',
-        key: 'students',
-        dataIndex: 'students',
-    },
-    {
-        title: 'Courses',
-        key: 'courses',
-        dataIndex: 'courses',
-    },
-    {
-        title: 'Days',
-        key: 'days',
-        dataIndex: 'days',
-    },
-    {
         title: 'Phone',
         dataIndex: 'phone',
         key: 'phone',
     },
     {
-        title: 'Salary',
-        dataIndex: 'salary',
-        key: 'salary',
+        title: 'Date',
+        key: 'date',
+        dataIndex: 'date',
+    },
+    {
+        title: 'Debt',
+        key: 'debt',
+        dataIndex: 'debt',
+    },
+    {
+        title: 'Status',
+        key: 'status',
+        dataIndex: 'status',
         render: (text) => (
-            <p style={{ margin: '0', textAlign: 'center' }}>{text} so`m</p>
+            <StatusBtn 
+            padding='10px 20px' 
+            color={
+                text == 'Studying' 
+                ? '--main-green'
+                : text == 'Complited' 
+                ? '--accent-color'
+                : '--danger-status-color'
+            } >
+                <span>{text}</span>
+            </StatusBtn>
+                
         )
+
     },
     {
         title: 'Action',
         dataIndex: 'action',
         key: 'action',
-        // render: () => (
-        //     <EditeBtn />
-        // ),
+        render: () => (
+            <WarnBtn>☼</WarnBtn>
+        ),
     },
 ];
 
 const data = [
     {
         key: '1',
-        instructorName: 'John Brown',
-        phone: "+998995568866",
-        students: 9,
+        studentName: 'John Brown',
+        phone: "995568866",
+        date: 'Mn-Wd-Fr',
         img: "https://cdn.pixabay.com/photo/2015/07/11/19/23/book-841171__340.jpg",
-        courses: 1,
-        salary: 5200000 ,
-        days: "All days"
+        debt: 9000,
+        status: "Studying"
     },
     {
         key: '2',
-        instructorName: 'Key Brown',
-        phone: "+998995568866",
-        students: 9,
+        studentName: 'Key Brown',
+        phone: "995568866",
+        date: 'Mn-Tu-Wd',
         img: "https://cdn.pixabay.com/photo/2015/07/11/19/23/book-841171__340.jpg",
-        courses: 2,
-        salary: 5200000 ,
-        days: "Mn-Wd-Fr"
+        debt: 10002,
+        status: "Left"
     },
     {
         key: '3',
-        instructorName: 'Hey Brown',
-        phone: "+998995568866",
-        students: 9,
+        studentName: 'Hey Brown',
+        phone: "995568866",
+        date: 'Tu-Th-St',
         img: "https://cdn.pixabay.com/photo/2015/07/11/19/23/book-841171__340.jpg",
-        courses: 4,
-        salary: 5200000 ,
-        days: "Mn-Wd-Fr"
+        debt: 10000,
+        status: "Studying"
     },
     {
         key: '4',
-        instructorName: 'Yo Brown ',
-        phone: "+998995568866",
-        students: 9,
+        studentName: 'Yo Brown ',
+        phone: "995568866",
+        date: 'Tu-Th-St',
         img: "https://cdn.pixabay.com/photo/2015/07/11/19/23/book-841171__340.jpg",
-        courses: 2,
-        salary: 5200000 ,
-        days: "Mn-Wd-Fr"
+        debt: 10000,
+        status: "Complited"
     },
 ];
 

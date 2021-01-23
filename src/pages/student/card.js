@@ -1,17 +1,20 @@
 import React from "react";
-import { Link } from 'gatsby'
 import S from "../../styles/pages/group/list";
 // import Clock from "../../assets/img/svg/clock.svg";
 import { StatusBtn } from "../../styles/index";
+import {Link} from 'gatsby'
 // import DfImg from "../../assets/img/image.jpg";
+// import { useHistory } from "react-router-dom";
 
 const { StyledCard } = S;
 
 const Card = ({ data }) => {
+  // const history = useHistory();
 
   const {
     time,
     title,
+    // img,
     weekDays,
     students,
     price,
@@ -22,6 +25,10 @@ const Card = ({ data }) => {
     console.log("btn clicked");
   };
 
+  // const cardHandler = (e) => {
+  //   history.push("/group-info");
+  // };
+
   return (
     <>
       <StyledCard>
@@ -30,7 +37,7 @@ const Card = ({ data }) => {
           </div>
           {/* <img className="card__img" src={img || DfImg} alt="" /> */}
         </div>
-        <Link to='info'>
+        <Link to='/group'>
           <div className="card__body">
             <h1 className="card__title">{title}</h1>
             <div className="card__inner">
@@ -48,7 +55,6 @@ const Card = ({ data }) => {
             </div>
           </div>
         </Link>
-
         <button onClick={btnHandler} className="card__btn">
           Add Student
         </button>

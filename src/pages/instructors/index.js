@@ -81,7 +81,7 @@ const Index = () => {
         </InnerStudents>
         <InnerStudents>
           <div className="inner" style={{justifyContent: 'flex-end'}}>
-            <Link to='/instructorAdd'>
+            <Link to='add'>
               <button className="btn-green create__btn">
                 Create Instructor
               </button>

@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../instructors/card";
+import Card from "./card";
 import Schedule from '../Schedule/index'
 import S from "../../styles/components/tabs";
 import C from "../../styles/pages/center/instructor";
@@ -16,7 +16,7 @@ function RightTab({data, scheduleHandlerOn, scheduleHandlerOff}) {
 
   function callback(key) {
     console.log(key);
-    key == 2 ? scheduleHandlerOn() : scheduleHandlerOff();
+    key === 2 ? scheduleHandlerOn() : scheduleHandlerOff();
   }
   console.log(data);
   return (
