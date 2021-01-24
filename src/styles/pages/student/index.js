@@ -34,6 +34,9 @@ S.StudentWrapper = styled.div`
 
     }
     
+    .weekDays .ant-checkbox-inner{
+        border-radius: 50%;
+    }
     
     .add__d-flex > div:first-child {
         margin-right: 20px;
@@ -78,7 +81,7 @@ S.StudentWrapper = styled.div`
     `
 S.CheckboxGroup = styled.div`
         
-    padding-bottom: 20px;
+    padding: 20px 0;
     
     .label-wrapper {
         position: relative;

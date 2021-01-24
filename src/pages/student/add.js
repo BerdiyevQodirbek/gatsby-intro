@@ -79,13 +79,14 @@ function AddStudent() {
     // const [Group, setGroup] = useState('')
     // const [Time, setTime] = useState('')
     const [Suggesed, setSuggesed] = useState(0)
+    const [WeekDays, setWeekDays] = useState([])
     const refInput = useRef(null)
 
 
     const onFinish = values => {
         const valls = values;
         valls.sugessed = Suggesed
-        console.log('Success:', valls, image);
+        console.log('Success:', valls, image, arr);
     };
 
     const onFinishFailed = errorInfo => {
@@ -108,11 +109,18 @@ function AddStudent() {
         setimage(imgUrl)
     }
 
+    let arr = []
     const weekDaysHandler = (e) => {
-        console.log(e.target.value);
-    } 
-
-
+        var day = e.target.value;
+        var IsChecked = e.target.checked;
+        IsChecked ? arr.push(day) 
+        : arr = arr.filter(item => item !== day)
+        setWeekDays([...WeekDays, ...arr])
+        
+    }
+    
+    
+    console.log(WeekDays);
     return (
         <Layout>
             {WebCam ? (<WebcamCapture fileUrl={Url} hideModal={isWebCame} />) : ''}
@@ -123,7 +131,7 @@ function AddStudent() {
                         <CameraOutlined />
                     </S.CameraButton>
                     <S.UploadInput type='file' ref={refInput}></S.UploadInput>
-                    <S.UploadButton onClick={uploadHandler}>Upload Profile pic</S.UploadButton>
+                    <S.UploadButton onClick={uploadHandler}>Upload  Profile pic</S.UploadButton>
                 </div>
                 <div className="add__form-wrapper">
                     <Form
